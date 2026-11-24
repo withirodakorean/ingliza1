@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ingliz tili A1 · Uy vazifasi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f4f6fb;--card:#fff;--ink:#1f2433;--mute:#6b7285;--line:#e3e6ef;--acc:#2f6fdb;--ok:#1f9d55;--okbg:#e7f7ee;--bad:#d64545;--badbg:#fdecec;--soft:#e8f0fd;--r:16px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Nunito,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.5}
+button{font-family:inherit;font-size:inherit;color:inherit}
+header{background:var(--acc);color:#fff;padding:26px 16px 22px}
+.wrap{max-width:760px;margin:0 auto}
+header h1{margin:0;font-size:30px;font-weight:800;line-height:1.2}
+header h1 small{font-size:21px;font-weight:600;opacity:.95}
+header p{margin:6px 0 0;opacity:.95}
+header .by{font-weight:700;font-size:15px}
+header a{color:#fff}
+.topbtns{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.pill{background:rgba(255,255,255,.22);border:0;color:#fff;padding:8px 14px;border-radius:999px;font-weight:700;font-size:14px;cursor:pointer}
+.pill:hover{background:rgba(255,255,255,.33)}
+main{max-width:760px;margin:0 auto;padding:18px 14px 40px}
+.card{background:var(--card);border-radius:var(--r);padding:20px 18px;margin-bottom:16px;box-shadow:0 1px 3px rgba(20,30,60,.06)}
+.card h3{margin:0 0 2px;font-size:18px}
+.card h2{margin:0 0 4px}
+.hint{color:var(--mute);font-style:italic;font-size:13.5px;margin-bottom:12px}
+label.lbl{font-weight:700;display:block;margin-bottom:8px}
+input[type=text],textarea{width:100%;border:2px solid var(--line);border-radius:12px;padding:11px 14px;font:inherit;background:#fff;outline:none}
+input[type=text]:focus,textarea:focus{border-color:var(--acc)}
+.bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden;margin:14px 0 6px}
+.bar i{display:block;height:100%;background:var(--acc);width:0;transition:width .3s}
+.small{font-size:13.5px;color:var(--mute)}
+.unit{display:block;width:100%;text-align:left;border:0;background:var(--card);border-radius:var(--r);padding:18px 18px 16px 22px;margin-bottom:14px;cursor:pointer;box-shadow:0 1px 3px rgba(20,30,60,.06);border-left:7px solid var(--c);transition:transform .12s}
+.unit:hover{transform:translateY(-2px)}
+.unit .tag{color:var(--c);font-weight:800;font-size:13px;letter-spacing:.3px}
+.unit h2{margin:6px 0 4px;font-size:21px}
+.unit h2 span{font-weight:400;color:var(--mute);font-size:17px}
+.unit .tp{color:var(--mute);font-size:14px}
+.unit .bar i{background:var(--c)}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.tab{border:2px solid var(--line);background:#fff;border-radius:999px;padding:9px 4px;font-weight:800;font-size:14px;cursor:pointer}
+.tab.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.bank{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px}
+.w{border:2px solid var(--line);background:#fff;border-radius:12px;padding:12px 8px;cursor:pointer;text-align:center}
+.w b{display:block;font-size:17px}
+.w span{display:block;color:var(--mute);font-size:13.5px;line-height:1.3;margin-top:3px}
+.w:hover{border-color:var(--acc)}
+.stage{font-weight:800;color:var(--acc);font-size:13px;margin:12px 0 8px}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+.match>div{display:flex;flex-direction:column;gap:8px}
+.mb{border:2px solid var(--line);background:#fff;border-radius:12px;padding:10px;cursor:pointer;min-height:46px}
+.mb.sel{border-color:var(--acc);background:var(--soft)}
+.mb.ok{border-color:var(--ok);background:var(--okbg);color:var(--ok);cursor:default}
+.mb.bad{border-color:var(--bad);background:var(--badbg);animation:sh .3s}
+@keyframes sh{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.q{border-top:1px solid var(--line);padding:12px 0 4px}
+.q:first-of-type{border-top:0}
+.qt{margin-bottom:8px}
+.qt .n{color:var(--acc);font-weight:800;margin-right:6px}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opts.row{flex-direction:row;flex-wrap:wrap}
+.opt{border:2px solid var(--line);background:#fff;border-radius:12px;padding:9px 14px;cursor:pointer;text-align:left}
+.opt:hover{border-color:var(--acc)}
+.opt.ok{border-color:var(--ok);background:var(--okbg);color:var(--ok);font-weight:700}
+.opt.bad{border-color:var(--bad);background:var(--badbg);color:var(--bad)}
+.in{display:flex;gap:8px;align-items:stretch}
+.in input{flex:1;min-width:0}
+.btn{border:0;background:var(--acc);color:#fff;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer;white-space:nowrap}
+.btn.ghost{background:#fff;color:var(--acc);border:2px solid var(--line)}
+.in input.ok{border-color:var(--ok);background:var(--okbg)}
+.in input.bad{border-color:var(--bad);background:var(--badbg)}
+.fb{font-size:14px;margin-top:5px;min-height:0}
+.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.rule{background:var(--soft);border-radius:12px;padding:11px 14px;font-size:14.5px;margin-bottom:8px}
+.text p{font-size:17px;line-height:1.85;margin:0 0 12px}
+.gl{border:0;background:none;padding:0;border-bottom:2px dotted var(--acc);cursor:pointer;font-size:inherit;position:relative}
+.gl.show::after{content:attr(data-t);position:absolute;left:50%;bottom:120%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:13px;padding:4px 9px;border-radius:8px;white-space:nowrap;z-index:5}
+details summary{cursor:pointer;color:var(--acc);font-weight:800;margin-top:12px}
+details p{color:#3a4152;margin:8px 0}
+.listen{margin-top:4px}
+.tray{display:flex;flex-wrap:wrap;gap:7px;min-height:48px;border:2px dashed var(--line);border-radius:12px;padding:7px;margin-bottom:8px}
+.tray.ok{border-color:var(--ok);background:var(--okbg)}
+.tray.bad{border-color:var(--bad);background:var(--badbg)}
+.chip{border:2px solid var(--line);background:#fff;border-radius:10px;padding:6px 11px;cursor:pointer}
+.chip.used{visibility:hidden}
+.err{display:flex;flex-wrap:wrap;gap:4px 6px;padding:6px 0 10px}
+.ew{border:0;background:none;padding:5px 6px;border-radius:8px;cursor:pointer;font-size:17px}
+.ew.sel{background:#fff1c9;outline:2px solid #e6b300}
+.ew.ok{background:var(--okbg);outline:2px solid var(--ok)}
+.ew.miss{background:var(--badbg);outline:2px solid var(--bad)}
+.ew.wrong{text-decoration:line-through;color:var(--bad)}
+.model{background:#f8f7f2;border-left:4px solid var(--acc);border-radius:10px;padding:12px 14px}
+.model b{color:var(--acc)}
+.checks{list-style:none;padding:0;margin:10px 0}
+.checks li{padding:3px 0;color:var(--mute)}
+.checks li.ok{color:var(--ok);font-weight:700}
+.next{display:block;width:100%;margin-top:6px;padding:14px}
+textarea{min-height:170px;resize:vertical;line-height:1.6}
+footer{text-align:center;color:var(--mute);font-size:13.5px;padding:10px 14px 40px}
+footer a{color:var(--acc)}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;opacity:0;transition:.25s;pointer-events:none;z-index:9}
+.toast.on{opacity:1}
+.score{font-weight:800}
+@media (max-width:560px){header h1{font-size:24px}header h1 small{font-size:17px}.tab{font-size:12.5px}.in{flex-wrap:wrap}.in input{flex-basis:100%}.in .btn{flex:1}.bank{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header><div class="wrap" id="hd"></div></header>
+<main id="app"></main>
+<footer id="ft"></footer>
+<div class="toast" id="toast"></div>
+<script>
+/* ====== SOZLAMALAR: muallif ma'lumotini shu yerga yozing ====== */
+var CONFIG = {
+  author: "",        // masalan: "Ism Familiya"
+  telegram: "",      // masalan: "my_channel" (@ belgisisiz)
+  book: "Navigate Beginner A1"
+};
+var UNITS = [
+/* ======================= UNIT 1 ======================= */
+{n:1, title:"First meetings", uz:"Birinchi tanishuv",
+ topics:"introductions (tanishish) · countries (davlatlar) · numbers 1–10 · the alphabet · question words · verb be (I / you / we)",
+ vocab:[["hello","salom"],["hi","salom (norasmiy)"],["goodbye","xayr"],["bye","xayr (norasmiy)"],["name","ism"],["first name","ism"],["surname","familiya"],["Nice to meet you","Tanishganimdan xursandman"],["How are you?","Qalaysiz?"],["I’m fine, thanks","Yaxshi, rahmat"],["on business","ish safarida"],["on holiday","ta’tilda, dam olishda"],["country","davlat, mamlakat"],["Uzbekistan","O‘zbekiston"],["Russia","Rossiya"],["Turkey","Turkiya"],["China","Xitoy"],["Japan","Yaponiya"],["the UK","Buyuk Britaniya"],["the USA","AQSH"],["one","bir"],["two","ikki"],["three","uch"],["four","to‘rt"],["five","besh"],["six","olti"],["seven","yetti"],["eight","sakkiz"],["nine","to‘qqiz"],["ten","o‘n"],["what","nima"],["where","qayerda, qayerdan"],["how old","necha yosh"],["spell","harflab aytmoq"]],
+ reading:{title:"At the airport — Akmal meets Anna",
+  text:["Akmal: Hello! Are you Anna Smith? Anna: Yes, I am. Hi! Akmal: I’m Akmal Rakhimov. Welcome to Uzbekistan! Anna: Thank you. Nice to meet you, Akmal.",
+        "Akmal: Nice to meet you too. Are you from London? Anna: No, I’m not. I’m from Manchester. And you? Are you from Tashkent? Akmal: Yes, I am. Are you on business? Anna: Yes, I am. I’m a teacher.",
+        "Akmal: OK. This is your hotel — the Silk Road Hotel. Your room is number nine. Anna: Thank you! Goodbye, Akmal. Akmal: Bye, Anna. See you tomorrow!"],
+  gloss:{"Welcome":"xush kelibsiz","too":"ham","hotel":"mehmonxona","tomorrow":"ertaga"},
+  uz:["Akmal: Salom! Siz Anna Smitmisiz? Anna: Ha, menman. Salom! Akmal: Men Akmal Rahimovman. O‘zbekistonga xush kelibsiz! Anna: Rahmat. Tanishganimdan xursandman, Akmal.",
+      "Akmal: Men ham xursandman. Siz Londondanmisiz? Anna: Yo‘q. Men Manchesterdanman. Siz-chi? Toshkentdanmisiz? Akmal: Ha. Siz ish safaridamisiz? Anna: Ha. Men o‘qituvchiman.",
+      "Akmal: Yaxshi. Mana sizning mehmonxonangiz — «Ipak yo‘li» mehmonxonasi. Xonangiz to‘qqizinchi raqamli. Anna: Rahmat! Xayr, Akmal. Akmal: Xayr, Anna. Ertaga ko‘rishamiz!"],
+  tf:[["Anna is from London.",false],["Akmal is from Tashkent.",true],["Anna is on holiday.",false],["Anna’s room is number nine.",true]],
+  mcq:[["What is Anna’s job?",["She’s a teacher.","She’s a doctor.","She’s a student."]],["What is Akmal’s surname?",["Rakhimov","Smith","Silk"]],["Where is Anna from?",["Manchester","Tashkent","London"]]],
+  find:[["xush kelibsiz","welcome"],["ish safarida","on business"],["mehmonxona","hotel"],["ertaga","tomorrow"]]},
+ grammar:[
+  {name:"Verb be: I am / you are / we are",note:"I <b>am</b> (I’m) · you <b>are</b> (you’re) · we <b>are</b> (we’re). Inkor: I’<b>m not</b>, you <b>aren’t</b>. Savol: <b>Are</b> you…? — Yes, I <b>am</b>. / No, I’<b>m not</b>.",
+   form:[["I ___ Akmal. (be)","am|'m"],["You ___ a teacher. (be)","are|'re"],["We ___ from Samarkand. (be)","are|'re"],["___ you on holiday?","are"],["Are you from Japan? — No, I ___ not.","am|'m"]],
+   choose:[["Men talabaman.",["I’m a student.","I a student.","I are a student."]],["Siz Toshkentdanmisiz? — Ha.",["Are you from Tashkent? — Yes, I am.","You are from Tashkent? — Yes, I’m.","Is you from Tashkent? — Yes, I am."]]]},
+  {name:"Question words: what / where / how",note:"<b>What’s</b> your name? (Ismingiz nima?) · <b>Where</b> are you from? (Qayerdansiz?) · <b>How</b> are you? (Qalaysiz?) · <b>How old</b> are you? (Necha yoshdasiz?) · <b>How</b> do you spell that? (Qanday yoziladi?)",
+   form:[["___ is your name? — Malika.","what"],["___ are you from? — Uzbekistan.","where"],["___ are you? — I’m fine, thanks.","how"],["How ___ are you? — I’m twenty.","old"],["What’s your ___? — My surname is Karimova.","surname"]],
+   choose:[["Qayerdansiz?",["Where are you from?","What are you from?","Where you are from?"]],["Ismingiz nima?",["What’s your name?","What your name?","How is your name?"]]]}],
+ build:[["Nice to meet you","Tanishganimdan xursandman."],["Where are you from","Qayerdansiz?"],["I am from Uzbekistan","Men O‘zbekistondanman."]],
+ writing:{title:"Anketa to‘ldiring (fill in a form)",
+  errors:{text:"Hello! My name *are Dilnoza. I *from Bukhara. I *is a student.",fixed:"Hello! My name is Dilnoza. I'm from Bukhara. I'm a student."},
+  modelTitle:"HOTEL FORM",
+  model:["First name: Anna","Surname: Smith","Country: the UK","City: Manchester","Phone number: 07 4 2 9 6 1 3 8 5","Email: anna.smith@mail.com","—","Hello! I’m Anna. I’m from Manchester in the UK. I’m a teacher. I’m on business."],
+  task:"O‘zingiz haqida 4–6 gap yozing: ismingiz, familiyangiz, qayerdansiz, yoshingiz, kasbingiz.",min:4,max:6,
+  checks:[["Kamida 4 ta gap",""],["I’m / I am","\\b(i'm|i’m|i am)\\b"],["Davlat yoki shahar nomi (from …)","\\bfrom \\w+"],["My name is …","my name"]]}
+},
+/* ======================= UNIT 2 ======================= */
+{n:2, title:"Questions", uz:"Savollar",
+ topics:"objects (narsalar) · plural nouns · numbers 11–100 · jobs (kasblar) · this / that / these / those · be (he / she / it / they) · prepositions of place · the time",
+ vocab:[["apple","olma"],["book","kitob"],["pen","ruchka"],["phone","telefon"],["tablet","planshet"],["key","kalit"],["laptop","noutbuk"],["notepad","bloknot"],["umbrella","soyabon"],["wallet","hamyon"],["eleven","o‘n bir"],["twelve","o‘n ikki"],["twenty","yigirma"],["fifty","ellik"],["a hundred","yuz"],["doctor","shifokor"],["engineer","muhandis"],["nurse","hamshira"],["teacher","o‘qituvchi"],["student","talaba"],["waiter","ofitsiant"],["taxi driver","taksi haydovchisi"],["shop assistant","sotuvchi"],["in","ichida"],["on","ustida"],["near","yaqinida"],["next to","yonida"],["o’clock","soat (aniq)"],["half past","yarim"],["What time is it?","Soat necha?"]],
+ reading:{title:"My friends — a blog by Sherzod",
+  text:["Hi! I’m Sherzod and this is my blog. This is a photo of my friends. We’re in a café in Tashkent. It’s half past seven in the evening.",
+        "This is Kamola. She’s twenty-five and she’s a doctor. Her hospital is near the café. Next to Kamola is Timur. He’s a taxi driver. He’s very funny!",
+        "Those two people are Diana and Max. They aren’t from Uzbekistan — they’re from Germany. They’re engineers. And where am I? I’m not in the photo. I’m the photographer!"],
+  gloss:{"blog":"blog","photo":"surat","evening":"kechqurun","funny":"kulgili","photographer":"suratkash"},
+  uz:["Salom! Men Sherzodman, bu mening blogim. Bu — do‘stlarimning surati. Biz Toshkentdagi kafedamiz. Hozir kechki soat yetti yarim.",
+      "Bu — Kamola. U yigirma besh yoshda, shifokor. Uning shifoxonasi kafe yaqinida. Kamolaning yonida — Temur. U taksi haydovchisi. U juda kulgili!",
+      "Anavi ikki kishi — Diana va Maks. Ular O‘zbekistondan emas — Germaniyadan. Ular muhandis. Men-chi, qayerdaman? Men suratda yo‘qman. Men suratkashman!"],
+  tf:[["The friends are in a café.",true],["Kamola is a nurse.",false],["Timur is a taxi driver.",true],["Diana and Max are from Uzbekistan.",false]],
+  mcq:[["What time is it in the photo?",["half past seven","seven o’clock","half past eight"]],["How old is Kamola?",["twenty-five","twenty","thirty-five"]],["Where is Sherzod?",["He isn’t in the photo.","Next to Timur.","In the hospital."]]],
+  find:[["surat","photo"],["kechqurun","evening"],["shifokor","doctor"],["yonida","next to"]]},
+ grammar:[
+  {name:"this / that / these / those · plural nouns",note:"Yaqin: <b>this</b> (birlik), <b>these</b> (ko‘plik). Uzoq: <b>that</b> (birlik), <b>those</b> (ko‘plik). Ko‘plik: + <b>-s</b> (pens, keys). What’s <b>this</b>? — <b>It’s</b> a key. What are <b>these</b>? — <b>They’re</b> pens.",
+   form:[["pen → two ___","pens"],["key → three ___","keys"],["umbrella → four ___","umbrellas"],["Yaqindagi bitta: ___ is my phone.","this"],["Uzoqdagi ko‘p: ___ are my books.","those"]],
+   choose:[["Bular — mening kalitlarim.",["These are my keys.","This are my keys.","These is my keys."]],["Anavi nima? — Bu soyabon.",["What’s that? — It’s an umbrella.","What’s that? — It’s a umbrella.","What’s those? — It’s an umbrella."]]]},
+  {name:"Verb be: he / she / it / they",note:"he / she / it <b>is</b> (he’s, she’s, it’s) · they <b>are</b> (they’re). Inkor: <b>isn’t</b>, <b>aren’t</b>. Savol: <b>Is</b> he a doctor? — Yes, he <b>is</b>. / No, he <b>isn’t</b>. Kasb oldidan <b>a/an</b>: She’s <b>an</b> engineer.",
+   form:[["She ___ a nurse. (be)","is|'s"],["They ___ students. (be)","are|'re"],["He ___ a waiter. (be, inkor)","isn't|is not|'s not"],["___ it your phone?","is"],["She’s ___ engineer. (a / an)","an"]],
+   choose:[["U shifokor emas.",["He isn’t a doctor.","He aren’t a doctor.","He not a doctor."]],["Ular o‘qituvchimi? — Ha.",["Are they teachers? — Yes, they are.","Is they teachers? — Yes, they is.","Are they teacher? — Yes, they are."]]]}],
+ build:[["What time is it","Soat necha?"],["My phone is on the table","Telefonim stol ustida."],["She is a nurse","U hamshira."]],
+ writing:{title:"Blog yozing (a blog post)",
+  errors:{text:"This is my friend Lola. She *are a teacher. Her school is *next the park. These are her two *cat.",fixed:"This is my friend Lola. She is a teacher. Her school is next to the park. These are her two cats."},
+  modelTitle:"My family photo",
+  model:["This is a photo of my family. We’re at home in Namangan.","This is my brother, Javlon. He’s twenty and he’s a student.","Next to him is my sister, Madina. She’s a nurse.","Those are my parents. They’re teachers.","It’s nine o’clock in the morning in the photo."],
+  task:"Do‘stlaringiz yoki oilangiz surati haqida 4–6 gapli blog yozing: kim, necha yoshda, kasbi, qayerda.",min:4,max:6,
+  checks:[["Kamida 4 ta gap",""],["he’s / she’s / they’re (be)","\\b(he's|he’s|she's|she’s|they're|they’re|he is|she is|they are)\\b"],["Kasb (doctor, teacher, student…)","\\b(doctor|teacher|student|nurse|engineer|waiter|driver|assistant)\\b"],["this / that / these / those","\\b(this|that|these|those)\\b"]]}
+},
+/* ======================= UNIT 3 ======================= */
+{n:3, title:"People and possessions", uz:"Odamlar va ularning narsalari",
+ topics:"adjective + noun · have got / has got · irregular plurals · opposite adjectives · possessive determiners · possessive ’s · family (oila)",
+ vocab:[["a clever woman","aqlli ayol"],["a funny film","kulgili film"],["a hard job","og‘ir ish"],["a lovely city","yoqimli shahar"],["a friendly dog","do‘stona it"],["neighbour","qo‘shni"],["man → men","erkak → erkaklar"],["woman → women","ayol → ayollar"],["child → children","bola → bolalar"],["person → people","odam → odamlar"],["car","mashina"],["bike","velosiped"],["camera","fotoapparat"],["watch","qo‘l soati"],["old","eski, keksa"],["new","yangi"],["big","katta"],["small","kichik"],["cheap","arzon"],["expensive","qimmat"],["good","yaxshi"],["bad","yomon"],["mother","ona"],["father","ota"],["sister","opa, singil"],["brother","aka, uka"],["son","o‘g‘il"],["daughter","qiz (farzand)"],["husband","er"],["wife","xotin, rafiqa"],["grandparents","bobo va buvi"]],
+ reading:{title:"My neighbours in Samarkand — by Feruza",
+  text:["I’ve got a small flat in Samarkand. It isn’t new, but it’s a lovely place. I’ve got four neighbours — two men and two women — and they’re very friendly.",
+        "Mr and Mrs Usmonov are old. They haven’t got a car, but they’ve got a big garden and a friendly dog. Their son is a doctor in Tashkent.",
+        "My other neighbour is Nodira. She’s a clever woman — she’s an engineer. She’s got two children and a new bike. Her husband is a musician. Their children are funny and they’ve got a lot of books. We’re good friends!"],
+  gloss:{"flat":"kvartira","garden":"bog‘","musician":"musiqachi","other":"boshqa","a lot of":"ko‘p"},
+  uz:["Samarqandda kichik kvartiram bor. U yangi emas, lekin yoqimli joy. To‘rtta qo‘shnim bor — ikki erkak va ikki ayol — ular juda do‘stona.",
+      "Usmonovlar keksa. Ularning mashinasi yo‘q, lekin katta bog‘i va do‘stona iti bor. O‘g‘li Toshkentda shifokor.",
+      "Boshqa qo‘shnim — Nodira. U aqlli ayol — muhandis. Uning ikki farzandi va yangi velosipedi bor. Eri musiqachi. Bolalari kulgili, ularning kitoblari ko‘p. Biz yaxshi do‘stmiz!"],
+  tf:[["Feruza’s flat is big.",false],["Mr and Mrs Usmonov have got a car.",false],["Nodira is an engineer.",true],["Nodira has got two children.",true]],
+  mcq:[["What have Mr and Mrs Usmonov got?",["a big garden and a dog","a new car","a bike"]],["What is Nodira’s husband’s job?",["He’s a musician.","He’s a doctor.","He’s an engineer."]],["Where is the Usmonovs’ son?",["in Tashkent","in Samarkand","next door"]]],
+  find:[["qo‘shnilar","neighbours"],["do‘stona","friendly"],["aqlli","clever"],["velosiped","bike"]]},
+ grammar:[
+  {name:"have got / has got",note:"I/you/we/they <b>have got</b> (’ve got) · he/she/it <b>has got</b> (’s got). Inkor: <b>haven’t got</b>, <b>hasn’t got</b>. Savol: <b>Have</b> you <b>got</b> a car? — Yes, I <b>have</b>. / No, I <b>haven’t</b>.",
+   form:[["I ___ got a laptop.","have|'ve"],["She ___ got a new phone.","has|'s"],["We ___ got a car. (–)","haven't|have not"],["___ he got a bike?","has"],["Have you got a camera? — No, I ___.","haven't|have not"]],
+   choose:[["Akamning mashinasi bor.",["My brother has got a car.","My brother have got a car.","My brother has a got car."]],["Sizda soyabon bormi?",["Have you got an umbrella?","Has you got an umbrella?","Do you got an umbrella?"]]]},
+  {name:"Possessive determiners & ’s",note:"I → <b>my</b>, you → <b>your</b>, he → <b>his</b>, she → <b>her</b>, it → <b>its</b>, we → <b>our</b>, they → <b>their</b>. Egalik ’s: <b>Nodira’s</b> husband = Nodiraning eri.",
+   form:[["he → ___","his"],["she → ___","her"],["they → ___","their"],["we → ___","our"],["Ali + sister → ___ sister","Ali's"]],
+   choose:[["Bu uning (qiz) kitobi.",["This is her book.","This is she book.","This is hers book."]],["Otamning mashinasi eski.",["My father’s car is old.","My fathers car is old.","My father car’s is old."]]]}],
+ build:[["She has got two children","Uning ikki farzandi bor."],["Have you got a new phone","Yangi telefoningiz bormi?"],["My sister's husband is a doctor","Opamning eri shifokor."]],
+ writing:{title:"Ijtimoiy tarmoq uchun xabar yozing (social media message)",
+  errors:{text:"Hi Sara! I've got a new flat. It *have got two rooms. My *neighbour are friendly. *Their names are Ali and Zarina and they've got three *childs.",fixed:"Hi Sara! I've got a new flat. It has got two rooms. My neighbours are friendly. Their names are Ali and Zarina and they've got three children."},
+  modelTitle:"Message to a new friend",
+  model:["Hi Tom! Thanks for your message 😊","I’m Zuhra. I’m from Fergana. I’ve got a big family.","I’ve got two brothers and a sister. My sister’s name is Mohira — she’s funny!","My father’s a driver and my mother’s a teacher.","Have you got brothers or sisters? Write soon!"],
+  task:"Yangi do‘stingizga oilangiz va narsalaringiz haqida 4–6 gapli xabar yozing.",min:4,max:6,
+  checks:[["Kamida 4 ta gap",""],["have got / has got","\\b(have got|has got|'ve got|’ve got|'s got|’s got)\\b"],["Oila so‘zi (brother, sister, mother…)","\\b(brothers?|sisters?|mother|father|parents|son|daughter|husband|wife)\\b"],["Egalik olmoshi (my, his, her…)","\\b(my|his|her|our|their)\\b"]]}
+},
+/* ======================= UNIT 4 ======================= */
+{n:4, title:"My life", uz:"Mening hayotim",
+ topics:"common verbs (asosiy fe’llar) · transport · days of the week · daily activities · present simple: positive, negative, yes/no questions · in a shop",
+ vocab:[["live","yashamoq"],["work","ishlamoq"],["study","o‘qimoq"],["like","yoqtirmoq"],["play","o‘ynamoq; chalmoq"],["read","o‘qimoq (kitob)"],["watch","tomosha qilmoq"],["teach","o‘qitmoq"],["go","bormoq"],["bus","avtobus"],["train","poyezd"],["car","mashina"],["on foot","piyoda"],["by metro","metroda"],["Monday","dushanba"],["Tuesday","seshanba"],["Wednesday","chorshanba"],["Thursday","payshanba"],["Friday","juma"],["Saturday","shanba"],["Sunday","yakshanba"],["get up","turmoq (o‘rindan)"],["have breakfast","nonushta qilmoq"],["go to work","ishga bormoq"],["get home","uyga kelmoq"],["have dinner","kechki ovqat yemoq"],["go to bed","uxlashga yotmoq"],["check emails","xatlarni tekshirmoq"],["How much is it?","Bu qancha turadi?"],["Can I have…?","…bera olasizmi?"]],
+ reading:{title:"About me — Jasur, a bus driver",
+  text:["My name’s Jasur and I live in Tashkent with my wife and two children. I’m a bus driver. I work from Monday to Friday.",
+        "I get up at six o’clock and have breakfast with my family. I don’t go to work by car — I go by metro. I start work at seven o’clock. I like my job because I meet a lot of people.",
+        "I get home at six and we have dinner together. My son plays football and my daughter reads books. I don’t watch TV in the evening — I go to bed at ten. On Saturday and Sunday I don’t work. We go to my parents’ house."],
+  gloss:{"driver":"haydovchi","start":"boshlamoq","because":"chunki","together":"birga","parents":"ota-ona"},
+  uz:["Ismim Jasur, men xotinim va ikki farzandim bilan Toshkentda yashayman. Men avtobus haydovchisiman. Dushanbadan jumagacha ishlayman.",
+      "Soat oltida turaman va oilam bilan nonushta qilaman. Ishga mashinada bormayman — metroda boraman. Ishni soat yettida boshlayman. Ishimni yaxshi ko‘raman, chunki ko‘p odamlar bilan uchrashaman.",
+      "Uyga oltida kelaman va birga kechki ovqat yeymiz. O‘g‘lim futbol o‘ynaydi, qizim kitob o‘qiydi. Kechqurun televizor ko‘rmayman — o‘nda yotaman. Shanba va yakshanba ishlamayman. Ota-onamnikiga boramiz."],
+  tf:[["Jasur is a taxi driver.",false],["He goes to work by metro.",true],["He watches TV in the evening.",false],["He doesn’t work on Saturday.",true]],
+  mcq:[["What time does Jasur get up?",["at six o’clock","at seven o’clock","at ten o’clock"]],["Why does he like his job?",["He meets a lot of people.","It’s easy.","He drives a car."]],["What does his son do?",["He plays football.","He reads books.","He watches TV."]]],
+  find:[["yashayman","live"],["nonushta","breakfast"],["birga","together"],["haydovchi","driver"]]},
+ grammar:[
+  {name:"Present simple (+) · he/she/it + -s",note:"I/you/we/they <b>live</b> · he/she/it <b>lives</b>. watch → watch<b>es</b>, go → go<b>es</b>, study → stud<b>ies</b>, have → <b>has</b>.",
+   form:[["he / work → he ___","works"],["she / watch → she ___","watches"],["my son / play → he ___","plays"],["she / study → she ___","studies"],["he / have → he ___ breakfast","has"]],
+   choose:[["U Buxoroda yashaydi.",["She lives in Bukhara.","She live in Bukhara.","She is live in Bukhara."]],["Biz ingliz tilini o‘rganamiz.",["We study English.","We studies English.","We are study English."]]]},
+  {name:"Present simple (–) and yes/no questions",note:"Inkor: <b>don’t</b> / <b>doesn’t</b> + fe’l (−s yo‘q): He <b>doesn’t work</b>. Savol: <b>Do</b> you…? <b>Does</b> she…? Qisqa javob: Yes, I <b>do</b>. / No, she <b>doesn’t</b>.",
+   form:[["I ___ like coffee. (–)","don't|do not"],["She ___ work on Sunday. (–)","doesn't|does not"],["___ you live in Tashkent?","do"],["___ he go by bus?","does"],["Does she like tea? — Yes, she ___.","does"]],
+   choose:[["U televizor ko‘rmaydi.",["He doesn’t watch TV.","He don’t watch TV.","He doesn’t watches TV."]],["Siz piyoda borasizmi?",["Do you go on foot?","Are you go on foot?","Does you go on foot?"]]]}],
+ build:[["I go to work by metro","Ishga metroda boraman."],["She doesn't work on Sunday","U yakshanba kuni ishlamaydi."],["Do you have breakfast at home","Uyda nonushta qilasizmi?"]],
+ writing:{title:"Norasmiy elektron xat yozing (informal email)",
+  errors:{text:"Hi Kate! I *lives in Andijan. I *works in a bank. My sister *study at university. She *don't like maths.",fixed:"Hi Kate! I live in Andijan. I work in a bank. My sister studies at university. She doesn't like maths."},
+  modelTitle:"Email to a penfriend",
+  model:["Hi Kate,","Thanks for your email! I live in Andijan with my parents.","I’m a student. I study English and computers at college.","I get up at seven and go to college by bus.","I don’t work on Sunday — I play football with my friends.","Do you like sport? Write soon! Bobur"],
+  task:"Xorijlik do‘stingizga 4–6 gapli xat yozing: qayerda yashaysiz, nima qilasiz, kuningiz qanday o‘tadi.",min:4,max:6,
+  checks:[["Kamida 4 ta gap",""],["Present simple fe’l (live, work, study…)","\\b(live|work|study|like|go|get up|play|read|watch)\\b"],["don’t / doesn’t","(don't|don’t|doesn't|doesn’t|do not|does not)"],["Murojaat (Hi / Dear …)","\\b(hi|hello|dear)\\b"]]}
+},
+/* ======================= UNIT 5 ======================= */
+{n:5, title:"Style and design", uz:"Uslub va dizayn",
+ topics:"colours & clothes (ranglar, kiyimlar) · adverbs of frequency · adjectives · Wh- questions · parts of the body · very / really · travel information",
+ vocab:[["red","qizil"],["blue","ko‘k"],["green","yashil"],["yellow","sariq"],["black","qora"],["white","oq"],["brown","jigarrang"],["grey","kulrang"],["shirt","ko‘ylak"],["T-shirt","futbolka"],["dress","ko‘ylak (ayollar)"],["jeans","jinsi shim"],["shoes","tufli"],["jacket","kurtka"],["hat","shlyapa, bosh kiyim"],["always","doim"],["usually","odatda"],["sometimes","ba’zan"],["never","hech qachon"],["beautiful","chiroyli"],["modern","zamonaviy"],["unusual","g‘ayrioddiy"],["interesting","qiziqarli"],["head","bosh"],["hand","qo‘l (kaft)"],["arm","qo‘l"],["leg","oyoq"],["foot → feet","oyoq panjasi → panjalar"],["eye","ko‘z"],["really","juda, rostdan"]],
+ reading:{title:"Clothes in Uzbekistan — a student’s blog",
+  text:["In Uzbekistan, people usually wear modern clothes — jeans, T-shirts and jackets. But at weddings and holidays, many women wear beautiful atlas dresses. Atlas is a silk from Margilan. It’s red, yellow, blue and green — really colourful!",
+        "Old men sometimes wear a long coat called a chapan and a small black and white hat — a doppi. My grandfather always wears his doppi. He never goes out without it!",
+        "And me? I usually wear black jeans and a white shirt. But on Navruz I always wear my green atlas dress. What do you wear on holidays?"],
+  gloss:{"weddings":"to‘ylar","silk":"ipak","colourful":"rang-barang","coat":"to‘n, palto","without":"…siz"},
+  uz:["O‘zbekistonda odamlar odatda zamonaviy kiyim kiyadi — jinsi shim, futbolka va kurtka. Lekin to‘y va bayramlarda ko‘p ayollar chiroyli atlas ko‘ylak kiyadi. Atlas — Marg‘ilon ipagi. U qizil, sariq, ko‘k va yashil — juda rang-barang!",
+      "Keksa erkaklar ba’zan chopon deb ataladigan uzun to‘n va kichik oq-qora bosh kiyim — do‘ppi kiyadi. Bobom doim do‘ppisini kiyadi. U hech qachon do‘ppisiz tashqariga chiqmaydi!",
+      "Men-chi? Men odatda qora jinsi shim va oq ko‘ylak kiyaman. Lekin Navro‘zda doim yashil atlas ko‘ylagimni kiyaman. Siz bayramlarda nima kiyasiz?"],
+  tf:[["Atlas is a silk from Margilan.",true],["Old men never wear a chapan.",false],["The writer’s grandfather always wears a doppi.",true],["The writer wears a red dress on Navruz.",false]],
+  mcq:[["What do people usually wear in Uzbekistan?",["modern clothes","atlas dresses","chapans"]],["What colour is a doppi?",["black and white","red and yellow","green"]],["What does the writer usually wear?",["black jeans and a white shirt","an atlas dress","a chapan"]]],
+  find:[["ipak","silk"],["chiroyli","beautiful"],["doim","always"],["odatda","usually"]]},
+ grammar:[
+  {name:"Adverbs of frequency",note:"<b>always</b> (100%) → <b>usually</b> → <b>often</b> → <b>sometimes</b> → <b>never</b> (0%). Fe’ldan <b>oldin</b>: I <b>always wear</b> jeans. Lekin <b>be</b>dan keyin: He <b>is never</b> late.",
+   form:[["100%: I ___ wear a hat in winter.","always"],["0%: She ___ wears a dress.","never"],["(usually) I wear jeans. → I ___ wear jeans.","usually"],["(sometimes) We go shopping. → We ___ go shopping.","sometimes"],["(always) He is happy. → He is ___ happy.","always"]],
+   choose:[["U doim qora kiyadi.",["She always wears black.","She wears always black.","Always she wear black."]],["Men hech qachon kech qolmayman.",["I’m never late.","I never am late.","I’m not never late."]]]},
+  {name:"Wh- questions (present simple)",note:"<b>What</b> (nima) · <b>Where</b> (qayerda) · <b>When</b> (qachon) · <b>Who</b> (kim) · <b>Why</b> (nega) · <b>What colour</b> (qanday rang). Tartib: Wh- + do/does + ega + fe’l? <b>What do</b> you wear? <b>Where does</b> she work?",
+   form:[["___ do you wear to work? — A shirt.","what"],["___ does he live? — In Khiva.","where"],["___ do you go shopping? — On Saturday.","when"],["What ___ is your bag? — Brown.","colour|color"],["___ does she wear a hat? — Because it’s cold.","why"]],
+   choose:[["U qayerda ishlaydi?",["Where does she work?","Where she works?","Where do she work?"]],["Siz nima kiyasiz?",["What do you wear?","What you wear?","What does you wear?"]]]}],
+ build:[["I usually wear black jeans","Men odatda qora jinsi shim kiyaman."],["What colour is your jacket","Kurtkangiz qanday rangda?"],["My grandfather always wears a hat","Bobom doim bosh kiyim kiyadi."]],
+ writing:{title:"SMS orqali uchrashuv belgilang (text message)",
+  errors:{text:"Hi! *Where you are? I'm at the bus station. The bus *go at 5. I *wearing a red jacket.",fixed:"Hi! Where are you? I'm at the bus station. The bus goes at 5. I'm wearing a red jacket."},
+  modelTitle:"Texts: meeting a friend",
+  model:["Lola: Hi Aziza! Are you free on Saturday? Let’s go shopping 😊","Aziza: Yes! What time?","Lola: 10 o’clock at Samarqand Darvoza? We can have lunch there too.","Aziza: Great. Where do we meet?","Lola: Next to the main door. I usually wear a blue jacket — look for me!"],
+  task:"Do‘stingiz bilan uchrashish haqida 4–6 ta SMS yozing: qachon, qayerda, nima kiyasiz.",min:4,max:6,
+  checks:[["Kamida 4 ta gap",""],["Wh- savol (What / Where / When …?)","\\b(what|where|when|who|why)\\b[^.!?]*\\?"],["Rang yoki kiyim so‘zi","\\b(red|blue|green|yellow|black|white|brown|grey|shirt|t-shirt|dress|jeans|shoes|jacket|hat)\\b"],["Chastota ravishi (always, usually…)","\\b(always|usually|often|sometimes|never)\\b"]]}
+},
+/* ======================= UNIT 6 ======================= */
+{n:6, title:"Places and facilities", uz:"Joylar va qulayliklar",
+ topics:"places in a town (shahardagi joylar) · hotel facilities (mehmonxona qulayliklari) · rooms & furniture · there is / there are · Is there…? / Are there…? · each / all the",
+ vocab:[["bank","bank"],["café","kafe"],["cinema","kinoteatr"],["hospital","shifoxona"],["museum","muzey"],["park","bog‘, park"],["restaurant","restoran"],["shop","do‘kon"],["supermarket","supermarket"],["station","bekat, vokzal"],["square","maydon"],["air conditioning","konditsioner"],["bath","vanna"],["car park","avtoturargoh"],["gym","sport zali"],["lift","lift"],["safe","seyf"],["towels","sochiqlar"],["Wi-fi","Wi-fi, simsiz internet"],["swimming pool","suzish havzasi"],["kitchen","oshxona (uyda)"],["bedroom","yotoqxona"],["bathroom","hammom, vanna xona"],["living room","mehmonxona (xona)"],["bed","karavot"],["table","stol"],["chair","stul"],["sofa","divan"],["fridge","muzlatgich"],["It doesn’t work","U ishlamayapti"]],
+ reading:{title:"Hotel Registan Plaza — a hotel review",
+  text:["★★★★☆ I stayed at this hotel in Samarkand for three nights. It’s in a great place — the Registan is only ten minutes on foot. There’s a big park next to the hotel and there are a lot of cafés and shops near it.",
+        "The rooms are clean and modern. Each room has got air conditioning, a TV and free Wi-fi. All the bathrooms have got a bath and big towels. There’s a gym and a swimming pool, but there isn’t a car park.",
+        "There was one problem: the lift in my building didn’t work, and my room was on the fifth floor! But the staff are very friendly. I recommend it!"],
+  gloss:{"stayed":"qoldim","clean":"toza","free":"bepul","floor":"qavat","staff":"xodimlar"},
+  uz:["★★★★☆ Men Samarqanddagi bu mehmonxonada uch kecha qoldim. U juda yaxshi joyda — Registongacha piyoda atigi o‘n daqiqa. Mehmonxona yonida katta bog‘ bor, yaqinida esa ko‘plab kafe va do‘konlar bor.",
+      "Xonalar toza va zamonaviy. Har bir xonada konditsioner, televizor va bepul Wi-fi bor. Barcha vanna xonalarida vanna va katta sochiqlar bor. Sport zali va suzish havzasi bor, lekin avtoturargoh yo‘q.",
+      "Bitta muammo bor edi: binomdagi lift ishlamadi, xonam esa beshinchi qavatda edi! Lekin xodimlar juda do‘stona. Tavsiya qilaman!"],
+  tf:[["The hotel is far from the Registan.",false],["There is a park next to the hotel.",true],["There isn’t a car park.",true],["Each room hasn’t got Wi-fi.",false]],
+  mcq:[["How long did the writer stay?",["three nights","five nights","one night"]],["What was the problem?",["The lift didn’t work.","The room was dirty.","There wasn’t any Wi-fi."]],["What are the staff like?",["very friendly","not very nice","busy"]]],
+  find:[["toza","clean"],["bepul","free"],["sport zali","gym"],["qavat","floor"]]},
+ grammar:[
+  {name:"there is / there are · Is there…? / Are there…?",note:"Birlik: <b>There’s</b> a park. Ko‘plik: <b>There are</b> two cafés. Inkor: <b>There isn’t</b> a bank. / <b>There aren’t any</b> shops. Savol: <b>Is there</b> a gym? — Yes, there <b>is</b>. / <b>Are there</b> any towels? — No, there <b>aren’t</b>.",
+   form:[["___ a cinema in my town. (+)","there is|there's"],["___ three bedrooms. (+)","there are"],["There ___ a lift. (–)","isn't|is not"],["___ there Wi-fi in the room?","is"],["Are there any cafés? — Yes, there ___.","are"]],
+   choose:[["Mehmonxonada suzish havzasi bormi?",["Is there a swimming pool in the hotel?","Are there a swimming pool in the hotel?","There is a swimming pool in the hotel?"]],["Xonada sochiqlar yo‘q.",["There aren’t any towels in the room.","There isn’t any towels in the room.","There not towels in the room."]]]},
+  {name:"each / all the",note:"<b>each</b> + birlik ot: <b>Each room has got</b> a TV (har bir xona). <b>all the</b> + ko‘plik ot: <b>All the rooms have got</b> a TV (barcha xonalar).",
+   form:[["___ room has got a safe. (each / all the)","each"],["___ rooms have got a bath. (each / all the)","all the"],["Each student ___ got a book. (has / have)","has"],["All the flats ___ got a kitchen. (has / have)","have"],["___ hotel in the street is new. (each / all the)","each"]],
+   choose:[["Har bir kvartirada oshxona bormi?",["Has each flat got a kitchen?","Have each flats got a kitchen?","Has all the flat got a kitchen?"]],["Barcha xonalar katta.",["All the rooms are big.","Each the rooms are big.","All the room is big."]]]}],
+ build:[["Is there a bank near here","Bu yerda yaqinda bank bormi?"],["There are two beds in the room","Xonada ikkita karavot bor."],["The air conditioning doesn't work","Konditsioner ishlamayapti."]],
+ writing:{title:"Mehmonxona haqida sharh yozing (hotel review)",
+  errors:{text:"The hotel is great. *There is two restaurants and *each rooms have got a balcony. *Are there a gym? Yes, there is.",fixed:"The hotel is great. There are two restaurants and each room has got a balcony. Is there a gym? Yes, there is."},
+  modelTitle:"★★★☆☆ Green Garden Hotel, Bukhara",
+  model:["The hotel is in the old city, next to a small park.","My room was big and there was a lovely bed.","Each room has got air conditioning and a fridge.","There’s a restaurant, but there isn’t a gym.","Problem: the Wi-fi doesn’t work in all the rooms."],
+  task:"Siz bo‘lgan (yoki xayoliy) mehmonxona haqida 4–6 gapli sharh yozing: qayerda, xonalar, qulayliklar, muammo.",min:4,max:6,
+  checks:[["Kamida 4 ta gap",""],["there is / there are","there (is|are|'s|’s|isn't|isn’t|aren't|aren’t)"],["Qulaylik so‘zi (Wi-fi, gym, lift…)","\\b(wi-?fi|gym|lift|pool|bath|towels|air conditioning|car park|restaurant|safe)\\b"],["each / all the","\\b(each|all the)\\b"]]}
+},
+/* ======================= UNIT 7 ======================= */
+{n:7, title:"Skills and interests", uz:"Qobiliyatlar va qiziqishlar",
+ topics:"abilities (qobiliyatlar) · can / can’t · adverbs of manner · hobbies (sevimli mashg‘ulotlar) · like + -ing · simple requests",
+ vocab:[["swim","suzmoq"],["sing","qo‘shiq aytmoq"],["dance","raqsga tushmoq"],["draw","rasm chizmoq"],["paint","bo‘yoq bilan chizmoq"],["drive","mashina haydamoq"],["ride a bike","velosiped haydamoq"],["speak","gapirmoq"],["cook","ovqat pishirmoq"],["play the piano","pianino chalmoq"],["play chess","shaxmat o‘ynamoq"],["well","yaxshi"],["badly","yomon"],["quickly","tez"],["slowly","sekin"],["travel","sayohat qilmoq"],["take photos","suratga olmoq"],["shop online","internetdan xarid qilmoq"],["play video games","video o‘yin o‘ynamoq"],["listen to music","musiqa tinglamoq"],["go to the cinema","kinoga bormoq"],["go out with friends","do‘stlar bilan sayr qilmoq"],["work in the garden","bog‘da ishlamoq"],["read","kitob o‘qimoq"],["love","juda yaxshi ko‘rmoq"],["hate","yomon ko‘rmoq"],["don’t mind","qarshi emasman"],["hobby","sevimli mashg‘ulot"],["Can you help me?","Menga yordam bera olasizmi?"],["Of course","Albatta"]],
+ reading:{title:"Bekzod can paint — a young artist from Nukus",
+  text:["Bekzod is fourteen and he lives in Nukus. He can’t play football very well and he can’t swim, but he can paint beautifully. His paintings are in a small gallery in his city.",
+        "He loves painting animals and old buildings. He paints slowly and carefully — one picture takes two or three weeks. He also likes taking photos and he can play the dutar.",
+        "‘I don’t like playing video games,’ he says. ‘I like going out with my camera. My dream is to paint all the old cities of Uzbekistan.’ Can he do it? We think he can!"],
+  gloss:{"paintings":"rasmlar (bo‘yoqli)","gallery":"galereya","animals":"hayvonlar","carefully":"ehtiyotkorlik bilan","dream":"orzu"},
+  uz:["Bekzod o‘n to‘rt yoshda va Nukusda yashaydi. U futbolni unchalik yaxshi o‘ynay olmaydi va suza olmaydi, lekin chiroyli rasm chiza oladi. Uning rasmlari shahridagi kichik galereyada turibdi.",
+      "U hayvonlar va eski binolarni chizishni juda yaxshi ko‘radi. U sekin va ehtiyotkorlik bilan chizadi — bitta rasm ikki-uch hafta vaqt oladi. U suratga olishni ham yoqtiradi va dutor chala oladi.",
+      "«Men video o‘yin o‘ynashni yoqtirmayman, — deydi u. — Fotoapparatim bilan sayr qilishni yoqtiraman. Orzuim — O‘zbekistonning barcha qadimiy shaharlarini chizish». U buni uddalay oladimi? Bizningcha, ha!"],
+  tf:[["Bekzod can swim very well.",false],["He can paint beautifully.",true],["He paints quickly.",false],["He doesn’t like playing video games.",true]],
+  mcq:[["What does Bekzod love painting?",["animals and old buildings","people","cars"]],["How long does one picture take?",["two or three weeks","one day","two months"]],["What musical instrument can he play?",["the dutar","the piano","the guitar"]]],
+  find:[["sekin","slowly"],["orzu","dream"],["chiroyli (ravish)","beautifully"],["suratga olish","taking photos"]]},
+ grammar:[
+  {name:"can / can’t",note:"<b>can</b> + fe’l — qila olaman. <b>can’t</b> + fe’l — qila olmayman. Hamma shaxsga bir xil: She <b>can swim</b> (✗ cans, ✗ can to swim). Savol: <b>Can</b> you <b>drive</b>? — Yes, I <b>can</b>. / No, I <b>can’t</b>.",
+   form:[["Men suza olaman: I ___ swim.","can"],["U qo‘shiq ayta olmaydi: She ___ sing.","can't|cannot|can not"],["___ you play chess?","can"],["Can he drive? — No, he ___.","can't|cannot"],["Iltimos: ___ you help me?","can"]],
+   choose:[["U uchta tilda gapira oladi.",["He can speak three languages.","He cans speak three languages.","He can to speak three languages."]],["Siz raqsga tusha olasizmi?",["Can you dance?","Do you can dance?","You can dance?"]]]},
+  {name:"like + -ing · adverbs of manner",note:"<b>like / love / hate / don’t mind</b> + fe’l<b>-ing</b>: I <b>like reading</b>. swim → swi<b>mming</b>, dance → danc<b>ing</b>. Ravish: sifat + <b>-ly</b> (slow → slow<b>ly</b>, quick → quick<b>ly</b>), lekin good → <b>well</b>.",
+   form:[["I like ___ (read).","reading"],["She loves ___ (dance).","dancing"],["They hate ___ (swim).","swimming"],["quick → ___","quickly"],["good → ___","well"]],
+   choose:[["Men kino ko‘rishni yaxshi ko‘raman.",["I love watching films.","I love watch films.","I love to watching films."]],["U yaxshi pishiradi.",["He cooks well.","He cooks good.","He cooks goodly."]]]}],
+ build:[["I can't swim very well","Men unchalik yaxshi suza olmayman."],["She likes taking photos","U suratga olishni yoqtiradi."],["Can you help me please","Menga yordam bera olasizmi, iltimos?"]],
+ writing:{title:"Ijtimoiy tarmoqqa post yozing (social media post)",
+  errors:{text:"I *can to play the piano. I like *read books and I *loves cooking. I can't sing *good.",fixed:"I can play the piano. I like reading books and I love cooking. I can't sing well."},
+  modelTitle:"Post: Find a hobby friend!",
+  model:["Hi everyone! I’m Shahlo from Termez 👋","I love cooking and I like taking photos of food.","I can cook plov and samsa, but I can’t make cakes 😅","I don’t like playing video games.","Can anyone teach me to make a cake? I can teach you to cook plov!"],
+  task:"O‘zingizning qiziqishlaringiz haqida 4–6 gapli post yozing: nima qila olasiz, nima qila olmaysiz, nimani yoqtirasiz.",min:4,max:6,
+  checks:[["Kamida 4 ta gap",""],["can","\\bcan\\b"],["can’t","(can't|can’t|cannot)"],["like / love / hate + -ing","\\b(like|likes|love|loves|hate|hates|mind) \\w+ing\\b"]]}
+},
+/* ======================= UNIT 8 ======================= */
+{n:8, title:"Our past", uz:"Bizning o‘tmishimiz",
+ topics:"verb be in the past (was / were) · life then and now · past simple regular verbs · object pronouns · special occasions · biography",
+ vocab:[["yesterday","kecha"],["last week","o‘tgan hafta"],["last year","o‘tgan yil"],["in 1990","1990-yilda"],["when I was seven","yetti yoshimda"],["then","o‘shanda"],["now","hozir"],["born","tug‘ilgan"],["school","maktab"],["teacher","o‘qituvchi"],["classmate","sinfdosh"],["start","boshlamoq"],["finish","tugatmoq"],["live","yashamoq"],["work","ishlamoq"],["study","o‘qimoq"],["move","ko‘chmoq"],["marry","turmush qurmoq"],["die","vafot etmoq"],["invent","ixtiro qilmoq"],["birthday","tug‘ilgan kun"],["wedding","to‘y"],["Happy birthday!","Tug‘ilgan kuningiz bilan!"],["Congratulations!","Tabriklayman!"],["Really?","Rostdanmi?"],["me","meni / menga"],["him","uni / unga (erkak)"],["her","uni / unga (ayol)"],["us","bizni / bizga"],["them","ularni / ularga"]],
+ reading:{title:"A life from the past — Ulugh Beg",
+  text:["Ulugh Beg was born in 1394. His grandfather was Amir Temur. When he was a young man, Ulugh Beg lived in Samarkand. He was the ruler of the city, but he was also a great scientist.",
+        "He loved the stars. He studied them every night. In 1420 he opened a big school — a madrasa — on the Registan, and later he started an observatory. Scientists from many countries worked with him there.",
+        "Ulugh Beg and his scientists counted more than a thousand stars. People in Europe used his star tables for many years. He died in 1449, but today we remember him as a ruler and a scientist."],
+  gloss:{"ruler":"hukmdor","scientist":"olim","stars":"yulduzlar","observatory":"rasadxona","counted":"sanadi"},
+  uz:["Mirzo Ulug‘bek 1394-yilda tug‘ilgan. Uning bobosi Amir Temur edi. Yoshligida Ulug‘bek Samarqandda yashagan. U shahar hukmdori edi, lekin ayni paytda buyuk olim ham edi.",
+      "U yulduzlarni juda yaxshi ko‘rardi. Har kecha ularni o‘rganardi. 1420-yilda u Registonda katta maktab — madrasa ochdi, keyinroq esa rasadxona qurdirdi. U yerda u bilan ko‘plab mamlakatlardan kelgan olimlar ishladi.",
+      "Ulug‘bek va uning olimlari mingdan ortiq yulduzni sanadi. Yevropadagi odamlar uning yulduzlar jadvalidan ko‘p yillar foydalandi. U 1449-yilda vafot etdi, lekin bugun biz uni hukmdor va olim sifatida eslaymiz."],
+  tf:[["Ulugh Beg was born in 1394.",true],["His grandfather was a scientist from Europe.",false],["He opened a madrasa on the Registan.",true],["He counted about a hundred stars.",false]],
+  mcq:[["Where did Ulugh Beg live?",["in Samarkand","in Bukhara","in Europe"]],["What did he study every night?",["the stars","languages","maths books"]],["Who used his star tables?",["people in Europe","only his family","nobody"]]],
+  find:[["olim","scientist"],["yulduzlar","stars"],["tug‘ilgan","born"],["vafot etdi","died"]]},
+ grammar:[
+  {name:"Verb be — past: was / were",note:"I/he/she/it <b>was</b> · you/we/they <b>were</b>. Inkor: <b>wasn’t</b>, <b>weren’t</b>. Savol: <b>Were</b> you…? — Yes, I <b>was</b>. / <b>Was</b> she…? — No, she <b>wasn’t</b>.",
+   form:[["I ___ at school yesterday.","was"],["We ___ in Khiva last year.","were"],["He ___ at home. (–)","wasn't|was not"],["___ you happy when you were a child?","were"],["Was it cold? — Yes, it ___.","was"]],
+   choose:[["Yetti yoshimda Namanganda edim.",["When I was seven, I was in Namangan.","When I were seven, I was in Namangan.","When I was seven, I were in Namangan."]],["Ular kecha uyda emas edi.",["They weren’t at home yesterday.","They wasn’t at home yesterday.","They didn’t at home yesterday."]]]},
+  {name:"Past simple regular verbs · object pronouns",note:"Fe’l + <b>-ed</b>: work<b>ed</b>, live<b>d</b>, stud<b>ied</b>, sto<b>pped</b>. To‘ldiruvchi olmoshlar: I → <b>me</b>, he → <b>him</b>, she → <b>her</b>, we → <b>us</b>, they → <b>them</b>, it → <b>it</b>, you → <b>you</b>.",
+   form:[["work → ___","worked"],["live → ___","lived"],["study → ___","studied"],["Bu Ali. Men uni yaxshi ko‘raman: I like ___.","him"],["Bular mening do‘stlarim. Men ularga qo‘ng‘iroq qildim: I called ___.","them"]],
+   choose:[["U 2015-yilda Toshkentga ko‘chdi.",["She moved to Tashkent in 2015.","She move to Tashkent in 2015.","She moveed to Tashkent in 2015."]],["Iltimos, menga yordam bering.",["Please help me.","Please help I.","Please help my."]]]}],
+ build:[["I was born in Samarkand","Men Samarqandda tug‘ilganman."],["We lived in a small house","Biz kichik uyda yashadik."],["My grandmother called me yesterday","Buvim kecha menga qo‘ng‘iroq qildi."]],
+ writing:{title:"Biografiya yozing (a biography)",
+  errors:{text:"My grandfather *were born in 1950. He *work in a factory for 40 years. He *marryed my grandmother in 1975.",fixed:"My grandfather was born in 1950. He worked in a factory for 40 years. He married my grandmother in 1975."},
+  modelTitle:"My grandmother — Saodat",
+  model:["My grandmother, Saodat, was born in 1955 in a village near Kokand.","Her parents were farmers.","She studied at a college in Fergana and she worked as a nurse for 35 years.","She married my grandfather in 1978. They lived in Kokand.","Now she lives with us. I love her very much!"],
+  task:"Oilangizdagi keksa odam yoki mashhur shaxs haqida 4–6 gapli biografiya yozing: qachon, qayerda tug‘ilgan, nima qilgan.",min:4,max:6,
+  checks:[["Kamida 4 ta gap",""],["was / were","\\b(was|were)\\b"],["-ed fe’l (lived, worked…)","\\b\\w+ed\\b"],["Yil (in 1990 …)","\\b(in )?(1[89]|20)\\d\\d\\b"]]}
+},
+/* ======================= UNIT 9 ======================= */
+{n:9, title:"Unusual stories", uz:"G‘ayrioddiy hikoyalar",
+ topics:"past simple irregular verbs · memories (xotiralar) · past simple negatives & questions · common verb phrases · ago · the weather (ob-havo) · review of an event",
+ vocab:[["go → went","bormoq → bordi"],["have → had","ega bo‘lmoq → edi"],["meet → met","uchrashmoq → uchrashdi"],["see → saw","ko‘rmoq → ko‘rdi"],["get → got","olmoq → oldi"],["come → came","kelmoq → keldi"],["buy → bought","sotib olmoq → sotib oldi"],["find → found","topmoq → topdi"],["lose → lost","yo‘qotmoq → yo‘qotdi"],["take → took","olmoq → oldi"],["eat → ate","yemoq → yedi"],["make → made","qilmoq → qildi"],["leave → left","ketmoq → ketdi"],["ago","oldin (… oldin)"],["two days ago","ikki kun oldin"],["the last time","oxirgi marta"],["excuse","bahona"],["late","kech"],["news","yangiliklar"],["memory","xotira"],["sunny","quyoshli"],["rainy","yomg‘irli"],["cloudy","bulutli"],["windy","shamolli"],["snowy","qorli"],["hot","issiq"],["cold","sovuq"],["warm","iliq"],["weather","ob-havo"],["concert","konsert"]],
+ reading:{title:"A lucky day — a story from the news",
+  text:["Two weeks ago, a taxi driver in Tashkent, Ravshan Aliyev, found a black bag in his car. A passenger left it there. In the bag there was a laptop, a passport and a lot of money.",
+        "Ravshan didn’t keep the bag. He went to the police and they found the owner — a businessman from Japan. The businessman didn’t have a phone number for Ravshan, so he came to the police station the next day.",
+        "He met Ravshan and gave him a present — a new watch. Did Ravshan take it? ‘Yes, I did,’ he said. ‘And now I always know what time it is!’"],
+  gloss:{"passenger":"yo‘lovchi","keep":"o‘zida qoldirmoq","owner":"egasi","present":"sovg‘a"},
+  uz:["Ikki hafta oldin Toshkentdagi taksi haydovchisi Ravshan Aliyev mashinasida qora sumka topdi. Uni yo‘lovchi qoldirib ketgan edi. Sumkada noutbuk, pasport va ko‘p pul bor edi.",
+      "Ravshan sumkani o‘zida qoldirmadi. U politsiyaga bordi va ular egasini topishdi — Yaponiyadan kelgan tadbirkor. Tadbirkorda Ravshanning telefon raqami yo‘q edi, shuning uchun u ertasi kuni politsiya bo‘limiga keldi.",
+      "U Ravshan bilan uchrashdi va unga sovg‘a berdi — yangi qo‘l soati. Ravshan uni oldimi? «Ha, oldim, — dedi u. — Endi doim soat necha bo‘lganini bilaman!»"],
+  tf:[["Ravshan found the bag two weeks ago.",true],["There was a phone in the bag.",false],["Ravshan kept the bag.",false],["The owner was from Japan.",true]],
+  mcq:[["Where did Ravshan go with the bag?",["to the police","to a hotel","to the airport"]],["What was the present?",["a new watch","money","a laptop"]],["When did the businessman come to the police station?",["the next day","two weeks later","the same day"]]],
+  find:[["topdi","found"],["yo‘lovchi","passenger"],["sovg‘a","present"],["oldin (two weeks …)","ago"]]},
+ grammar:[
+  {name:"Past simple irregular verbs",note:"Noto‘g‘ri fe’llar -ed olmaydi, ularni yodlash kerak: go → <b>went</b>, see → <b>saw</b>, meet → <b>met</b>, have → <b>had</b>, buy → <b>bought</b>, find → <b>found</b>, come → <b>came</b>, eat → <b>ate</b>. Vaqt: two days <b>ago</b> (ikki kun oldin).",
+   form:[["go → ___","went"],["see → ___","saw"],["buy → ___","bought"],["eat → ___","ate"],["find → ___","found"]],
+   choose:[["Men uni uch yil oldin uchratdim.",["I met him three years ago.","I meeted him three years ago.","I met him ago three years."]],["Biz kecha konsertga bordik.",["We went to a concert yesterday.","We goed to a concert yesterday.","We go to a concert yesterday."]]]},
+  {name:"Past simple — negatives & questions",note:"Inkor: <b>didn’t</b> + asosiy fe’l: I <b>didn’t go</b>. Savol: <b>Did</b> you <b>see</b>…? — Yes, I <b>did</b>. / No, I <b>didn’t</b>. Wh-: <b>Where did</b> you <b>go</b>? ✗ didn’t <s>went</s>.",
+   form:[["I went. → I ___ (–)","didn't go|did not go"],["She saw it. → She ___ it. (–)","didn't see|did not see"],["___ you have a good time?","did"],["Where did you ___ (buy) it?","buy"],["Did he come? — No, he ___.","didn't|did not"]],
+   choose:[["Siz qayerga bordingiz?",["Where did you go?","Where did you went?","Where you went?"]],["U nonushta qilmadi.",["He didn’t have breakfast.","He didn’t had breakfast.","He not had breakfast."]]]}],
+ build:[["I lost my keys two days ago","Ikki kun oldin kalitlarimni yo‘qotdim."],["Did you see the news","Yangiliklarni ko‘rdingizmi?"],["It was sunny and warm","Havo quyoshli va iliq edi."]],
+ writing:{title:"Tadbir haqida sharh yozing (review of an event)",
+  errors:{text:"Last Saturday I *goed to a concert. The weather *were rainy. I *didn't took my umbrella, but the music was great!",fixed:"Last Saturday I went to a concert. The weather was rainy. I didn't take my umbrella, but the music was great!"},
+  modelTitle:"★★★★★ Navruz festival in the park",
+  model:["Three days ago I went to the Navruz festival in our park with my family.","The weather was sunny and warm.","We saw dancers and we ate sumalak — it was delicious!","My brother bought a kite and we flew it all afternoon.","We didn’t go home until nine o’clock. A great day!"],
+  task:"Yaqinda borgan tadbiringiz (konsert, to‘y, bayram, o‘yin) haqida 4–6 gapli sharh yozing: qachon, ob-havo, nima ko‘rdingiz, nima yedingiz.",min:4,max:6,
+  checks:[["Kamida 4 ta gap",""],["Noto‘g‘ri fe’l (went, saw, ate…)","\\b(went|saw|ate|had|met|bought|came|took|found|made|got)\\b"],["ago yoki last …","\\b(ago|last|yesterday)\\b"],["Ob-havo so‘zi (sunny, rainy…)","\\b(sunny|rainy|cloudy|windy|snowy|hot|cold|warm|weather)\\b"]]}
+},
+/* ======================= UNIT 10 ======================= */
+{n:10, title:"New places, new projects", uz:"Yangi joylar, yangi loyihalar",
+ topics:"going to (rejalar) · future projects · a life change · would like + noun / verb · café food (kafedagi taomlar) · ordering food · invitations & thank-you notes",
+ vocab:[["plan","reja"],["project","loyiha"],["raise money","pul yig‘moq (xayriya)"],["charity","xayriya"],["next week","kelasi hafta"],["next year","kelasi yil"],["tomorrow","ertaga"],["tonight","bugun kechqurun"],["move to","…ga ko‘chmoq"],["learn","o‘rganmoq"],["start a business","biznes boshlamoq"],["coffee","qahva"],["tea","choy"],["water","suv"],["orange juice","apelsin sharbati"],["cake","tort, pirojniy"],["sandwich","sendvich"],["salad","salat"],["soup","sho‘rva"],["ice cream","muzqaymoq"],["menu","menyu"],["bill","hisob"],["I’d like…","Menga … bering / …ni xohlayman"],["Would you like…?","…ni xohlaysizmi?"],["invitation","taklifnoma"],["party","bazm, ziyofat"],["Thank you for…","… uchun rahmat"],["Can you come?","Kela olasizmi?"],["delicious","mazali"],["popular","mashhur, ommabop"]],
+ reading:{title:"A new life — Madina’s plans",
+  text:["Madina is a nurse in Urgench. But next year her life is going to change. She’s going to move to Tashkent with her husband, Otabek. He’s going to start a new job in a big hospital.",
+        "Madina isn’t going to work as a nurse in Tashkent. She’s going to open a small café! ‘I love cooking,’ she says. ‘I’d like to make Khorezm food for people in the capital — tukhum barak, shivit oshi and sweet cakes.’",
+        "Are they going to sell their house in Urgench? ‘No, we aren’t,’ says Otabek. ‘Our parents are going to live there. We’re going to visit them every summer.’"],
+  gloss:{"change":"o‘zgarmoq","open":"ochmoq","capital":"poytaxt","sell":"sotmoq","visit":"ziyorat qilmoq, borib kelmoq"},
+  uz:["Madina Urganchda hamshira bo‘lib ishlaydi. Lekin kelasi yil uning hayoti o‘zgaradi. U eri Otabek bilan Toshkentga ko‘chib o‘tadi. Otabek katta shifoxonada yangi ishni boshlaydi.",
+      "Madina Toshkentda hamshira bo‘lib ishlamaydi. U kichik kafe ochmoqchi! «Men ovqat pishirishni juda yaxshi ko‘raman, — deydi u. — Poytaxtdagi odamlar uchun Xorazm taomlarini — tuxum barak, shivit oshi va shirin pishiriqlarni tayyorlamoqchiman».",
+      "Ular Urganchdagi uylarini sotishadimi? «Yo‘q, — deydi Otabek. — U yerda ota-onalarimiz yashaydi. Biz ularni har yozda borib ko‘ramiz»."],
+  tf:[["Madina is going to move to Tashkent.",true],["She is going to work as a nurse in Tashkent.",false],["Otabek is going to start a new job.",true],["They are going to sell their house.",false]],
+  mcq:[["What is Madina going to open?",["a small café","a hospital","a shop"]],["What food would she like to make?",["Khorezm food","Italian food","only cakes"]],["Who is going to live in their house in Urgench?",["their parents","their friends","nobody"]]],
+  find:[["kelasi yil","next year"],["ochmoq","open"],["poytaxt","capital"],["sotmoq","sell"]]},
+ grammar:[
+  {name:"going to (rejalar)",note:"am/is/are + <b>going to</b> + fe’l: I’<b>m going to learn</b> English. Inkor: She <b>isn’t going to</b> work. Savol: <b>Are</b> you <b>going to</b> move? — Yes, I <b>am</b>. / No, I’<b>m not</b>.",
+   form:[["I ___ going to visit my aunt.","am|'m"],["He ___ going to buy a car.","is|'s"],["We ___ going to sell our house. (–)","aren't|are not|'re not"],["___ they going to come?","are"],["She’s going ___ start a business.","to"]],
+   choose:[["Kelasi hafta men Samarqandga boraman (reja).",["I’m going to go to Samarkand next week.","I going to go to Samarkand next week.","I’m go to Samarkand next week."]],["Siz ingliz tilini o‘rganmoqchimisiz?",["Are you going to learn English?","Do you going to learn English?","Are you going learn English?"]]]},
+  {name:"would like + noun / to + verb",note:"Muloyim istak: I’<b>d like</b> a coffee (menga qahva bering). I’<b>d like to</b> go (bormoqchiman). Taklif: <b>Would you like</b> some tea? — Yes, please. / No, thank you. ✗ I’d like <s>go</s>.",
+   form:[["Menga choy bering: I’___ like a tea.","d"],["Men kafe ochmoqchiman: I’d like ___ open a café.","to"],["___ you like some cake?","would"],["She’d like ___ (learn) French.","to learn"],["Would you like a sandwich? — Yes, ___.","please"]],
+   choose:[["Menga apelsin sharbati bering, iltimos.",["I’d like an orange juice, please.","I like an orange juice, please.","I’d like to an orange juice, please."]],["Muzqaymoq xohlaysizmi?",["Would you like an ice cream?","Do you like an ice cream now?","Would you like to an ice cream?"]]]}],
+ build:[["We are going to raise money for charity","Biz xayriya uchun pul yig‘amiz."],["Would you like some tea","Choy xohlaysizmi?"],["Can I have the bill please","Hisobni bering, iltimos."]],
+ writing:{title:"Taklifnoma va minnatdorchilik xati (invitation & thank-you note)",
+  errors:{text:"Hi Nodir! I *going to have a party on Friday. *Would you like come? We're going *eat plov. Thank you *to the present!",fixed:"Hi Nodir! I'm going to have a party on Friday. Would you like to come? We're going to eat plov. Thank you for the present!"},
+  modelTitle:"Invitation",
+  model:["Dear Kamila,","I’m going to have a birthday party on Saturday at 6 p.m.","It’s going to be at my house — Navoi Street, 12.","We’re going to have a big cake and play games.","Would you like to come? Please text me.","Love, Sabina"],
+  task:"Do‘stingizni bazmga taklif qiluvchi 4–6 gapli taklifnoma yozing (yoki sovg‘a uchun rahmat xati): qachon, qayerda, nima qilasizlar.",min:4,max:6,
+  checks:[["Kamida 4 ta gap",""],["going to","going to"],["Would you like … ? / I’d like …","(would you like|i'd like|i’d like|i would like)"],["Murojaat (Dear / Hi …)","\\b(dear|hi|hello)\\b"]]}
+}
+];
+
+</script>
+<script>
+(function(){
+var COLORS=["#2f6fdb","#6c4bd1","#0f8a6a","#c4581a","#c43a6a","#2b8bb8","#7a5a12","#4b6b1f","#b8332b","#5446c9","#0b7a8c","#8a3fb0"];
+var KEY="navA1hw";
+var S=load();
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+S.items=S.items||{};S.texts=S.texts||{};S.done=S.done||{};
+var $=function(s,r){return (r||document).querySelector(s)};
+function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function norm(s){return String(s).toLowerCase().replace(/[’‘`´]/g,"'").replace(/\s+/g," ").replace(/[.!?]+$/,"").trim()}
+function shuffle(a,seed){a=a.slice();var x=seed||Math.random()*1e9|0;for(var i=a.length-1;i>0;i--){x=(x*9301+49297)%233280;var j=Math.floor(x/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function hash(s){var h=7;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%100000;return h}
+function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove("on")},1800)}
+function speak(txt){try{var u=new SpeechSynthesisUtterance(txt);u.lang="en-GB";u.rate=.9;var v=speechSynthesis.getVoices().filter(function(v){return /^en(-|_)GB/i.test(v.lang)})[0]||speechSynthesis.getVoices().filter(function(v){return /^en/i.test(v.lang)})[0];if(v)u.voice=v;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+if(window.speechSynthesis)speechSynthesis.getVoices();
+
+/* --- task registry: every task has id and item count; done when all items solved --- */
+function itemKey(t,i){return t+"#"+i}
+function solved(t,i){return !!S.items[itemKey(t,i)]}
+function mark(t,i,first){var k=itemKey(t,i);if(!S.items[k]){S.items[k]=first?2:1;save()}}
+function prep(u){if(u.pick)return;var ix=shuffle(u.vocab.map(function(_,k){return k}),hash("p"+u.n));u.pick=ix.slice(0,6);u.spell=ix.slice(6).filter(function(k){return u.vocab[k][0].split(" ").length<=2}).slice(0,5)}
+function tasksOf(u){prep(u);var L=[];var n=u.n;
+ L.push(["u"+n+"-match",u.vocab.length]);
+ L.push(["u"+n+"-pick",u.pick.length]);
+ L.push(["u"+n+"-spell",u.spell.length]);
+ L.push(["u"+n+"-tf",u.reading.tf.length]);
+ L.push(["u"+n+"-mcq",u.reading.mcq.length]);
+ L.push(["u"+n+"-find",u.reading.find.length]);
+ u.grammar.forEach(function(g,gi){L.push(["u"+n+"-g"+gi,g.form.length+g.choose.length])});
+ L.push(["u"+n+"-build",u.build.length]);
+ L.push(["u"+n+"-err",1]);
+ L.push(["u"+n+"-write",1]);
+ return L}
+function taskDone(id,cnt){for(var i=0;i<cnt;i++)if(!solved(id,i))return false;return true}
+function unitStat(u){var L=tasksOf(u),d=0;L.forEach(function(t){if(taskDone(t[0],t[1]))d++});return [d,L.length]}
+function unitScore(u){var L=tasksOf(u),ok=0,all=0;L.forEach(function(t){if(/write$/.test(t[0]))return;for(var i=0;i<t[1];i++){all++;if(S.items[itemKey(t[0],i)]===2)ok++}});return [ok,all]}
+function allStat(){var d=0,a=0;UNITS.forEach(function(u){var s=unitStat(u);d+=s[0];a+=s[1]});return [d,a]}
+
+/* ---------- header / footer ---------- */
+function byline(){if(!CONFIG.author&&!CONFIG.telegram)return "";var s="Tuzuvchi: "+esc(CONFIG.author||"");if(CONFIG.telegram)s+=(CONFIG.author?" · ":"")+'<a href="https://t.me/'+esc(CONFIG.telegram)+'" target="_blank" rel="noopener">@'+esc(CONFIG.telegram)+"</a>";return s}
+function footer(){$("#ft").innerHTML=(byline()?byline()+" · ":"")+"«"+esc(CONFIG.book)+"» asosida"}
+
+/* ---------- HOME ---------- */
+function home(){
+ document.documentElement.style.setProperty("--acc",COLORS[0]);
+ $("#hd").innerHTML='<h1>Ingliz tili · Uy vazifasi <small>Homework</small></h1><p>'+esc(CONFIG.book)+' · '+UNITS.length+' unit (1–'+UNITS.length+') · Lug‘at, o‘qish, grammatika va yozuv</p>'+(byline()?'<p class="by">'+byline()+'</p>':"");
+ var app=$("#app");app.innerHTML="";
+ var c=el("div","card");var st=allStat();
+ c.innerHTML='<label class="lbl" for="nm">Ismingiz / Your name</label><input type="text" id="nm" placeholder="Ismingizni yozing"><div class="bar"><i style="width:'+(st[1]?st[0]/st[1]*100:0)+'%"></i></div><div class="small">Umumiy natija: '+st[0]+' / '+st[1]+' topshiriq</div>';
+ app.appendChild(c);
+ var nm=$("#nm");nm.value=S.name||"";nm.oninput=function(){S.name=nm.value;save()};
+ UNITS.forEach(function(u,i){
+  var s=unitStat(u);var b=el("button","unit");b.style.setProperty("--c",COLORS[i%COLORS.length]);
+  b.innerHTML='<div class="tag">'+u.n+'-UNIT · Unit '+u.n+'</div><h2>'+esc(u.title)+' <span>'+esc(u.uz)+'</span></h2><div class="tp">'+esc(u.topics)+'</div><div class="bar"><i style="width:'+(s[0]/s[1]*100)+'%"></i></div><div class="small">'+s[0]+' / '+s[1]+' topshiriq bajarildi</div>';
+  b.onclick=function(){location.hash="#u"+u.n+"-vocab"};app.appendChild(b)});
+ footer();window.scrollTo(0,0)}
+
+/* ---------- UNIT ---------- */
+var TABS=[["vocab","Lug‘at"],["reading","O‘qish"],["grammar","Grammatika"],["writing","Yozuv"]];
+var CUR=null;
+function unitHeader(u){var s=unitStat(u);var i=UNITS.indexOf(u);
+ var nx=UNITS[i+1];
+ $("#hd").innerHTML='<div class="topbtns"><button class="pill" id="bk">← Barcha unitlar</button>'+(nx?'<button class="pill" id="nx">'+nx.n+'-unit ›</button>':"")+'</div><h1>'+u.n+'-unit · '+esc(u.title)+' <small>'+esc(u.uz)+'</small></h1><p id="ust">'+s[0]+' / '+s[1]+' topshiriq bajarildi</p>';
+ $("#bk").onclick=function(){location.hash=""};if(nx)$("#nx").onclick=function(){location.hash="#u"+nx.n+"-vocab"}}
+function refresh(){if(!CUR)return;var s=unitStat(CUR);var e=$("#ust");if(e)e.textContent=s[0]+" / "+s[1]+" topshiriq bajarildi"}
+function unit(u,tab){
+ CUR=u;document.documentElement.style.setProperty("--acc",COLORS[(u.n-1)%COLORS.length]);
+ unitHeader(u);var app=$("#app");app.innerHTML="";
+ var t=el("div","tabs");TABS.forEach(function(x){var b=el("button","tab"+(x[0]===tab?" on":""),x[1]);b.onclick=function(){location.hash="#u"+u.n+"-"+x[0]};t.appendChild(b)});
+ app.appendChild(t);
+ ({vocab:vocab,reading:reading,grammar:grammar,writing:writing})[tab](u,app);
+ var ti=TABS.findIndex(function(x){return x[0]===tab});var nb;
+ if(ti<3){nb=el("button","btn next","Keyingisi: "+TABS[ti+1][1]+" →");nb.onclick=function(){location.hash="#u"+u.n+"-"+TABS[ti+1][0]}}
+ else{var nx=UNITS[UNITS.indexOf(u)+1];nb=el("button","btn next",nx?"Keyingi unit: "+nx.n+"-unit →":"← Barcha unitlar");nb.onclick=function(){location.hash=nx?"#u"+nx.n+"-vocab":""}}
+ app.appendChild(nb);footer();window.scrollTo(0,0)}
+
+/* ---- generic question builders ---- */
+function card(title,hint){var c=el("div","card");c.innerHTML="<h3>"+title+"</h3>"+(hint?'<div class="hint">'+hint+"</div>":"");return c}
+function qrow(c,i,label){var q=el("div","q");q.innerHTML='<div class="qt"><span class="n">'+(i+1)+"</span>"+label+"</div>";c.appendChild(q);return q}
+function choiceQ(c,tid,i,label,opts,ans,row){
+ var q=qrow(c,i,label);var box=el("div","opts"+(row?" row":""));var tried=false;
+ var order=row?opts.map(function(_,k){return k}):shuffle(opts.map(function(_,k){return k}),hash(tid+i));
+ order.forEach(function(k){var b=el("button","opt",esc(opts[k]));
+  if(solved(tid,i)&&k===ans)b.classList.add("ok");
+  b.onclick=function(){if(solved(tid,i))return;
+   if(k===ans){b.classList.add("ok");mark(tid,i,!tried);refresh()}else{tried=true;b.classList.add("bad")}};
+  box.appendChild(b)});
+ q.appendChild(box)}
+function inputQ(c,tid,i,label,answers){
+ var q=qrow(c,i,label);var row=el("div","in");var inp=el("input");inp.type="text";inp.placeholder="Javob";inp.setAttribute("aria-label","Javob");inp.autocomplete="off";inp.spellcheck=false;
+ var ch=el("button","btn","Tekshirish"),hp=el("button","btn ghost","Yordam");var fb=el("div","fb");var tried=false;
+ var A=answers.split("|");var k=itemKey(tid,i);
+ if(solved(tid,i)){inp.value=S.texts[k]||A[0];inp.classList.add("ok")}
+ function check(){var v=norm(inp.value);if(!v)return;
+  if(A.some(function(a){return norm(a)===v})){inp.classList.remove("bad");inp.classList.add("ok");fb.className="fb ok";fb.textContent="To‘g‘ri! ✓";S.texts[k]=inp.value;mark(tid,i,!tried);refresh()}
+  else{tried=true;inp.classList.add("bad");fb.className="fb bad";fb.textContent="Yana urinib ko‘ring."}}
+ ch.onclick=check;inp.onkeydown=function(e){if(e.key==="Enter")check()};
+ hp.onclick=function(){tried=true;var a=A[0];var cur=inp.value;var n=0;while(n<cur.length&&n<a.length&&cur[n].toLowerCase()===a[n].toLowerCase())n++;inp.value=a.slice(0,n+1);fb.className="fb";fb.textContent="Maslahat: "+a.length+" ta belgi";inp.focus()};
+ row.appendChild(inp);row.appendChild(ch);row.appendChild(hp);q.appendChild(row);q.appendChild(fb)}
+
+/* ---------- VOCAB ---------- */
+function vocab(u,app){
+ var c=card("So‘zlar banki","So‘zni bosing – talaffuzini eshitasiz.");var bk=el("div","bank");
+ u.vocab.forEach(function(w){var b=el("button","w","<b>"+esc(w[0])+"</b><span>"+esc(w[1])+"</span>");b.onclick=function(){speak(w[0])};bk.appendChild(b)});
+ c.appendChild(bk);app.appendChild(c);
+ // matching
+ var tid="u"+u.n+"-match";var m=card("So‘z va ma’nosini juftlang","Chapdan inglizcha so‘zni, o‘ngdan uning ma’nosini bosing.");
+ var idx=u.vocab.map(function(_,k){return k});var per=6;var stages=Math.ceil(idx.length/per);
+ m.querySelector(".hint").textContent+=" "+stages+" bosqich.";
+ for(var s=0;s<stages;s++)(function(s){
+  var part=idx.slice(s*per,s*per+per);m.appendChild(el("div","stage",(s+1)+"-bosqich / "+stages));
+  var g=el("div","match"),L=el("div"),R=el("div");var sel=null;
+  shuffle(part,hash(tid+s)).forEach(function(k){var b=el("button","mb",esc(u.vocab[k][0]));b.dataset.k=k;if(solved(tid,k))b.classList.add("ok");
+   b.onclick=function(){if(b.classList.contains("ok"))return;L.querySelectorAll(".sel").forEach(function(x){x.classList.remove("sel")});b.classList.add("sel");sel=b;speak(u.vocab[k][0])};L.appendChild(b)});
+  shuffle(part,hash(tid+s+"r")).forEach(function(k){var b=el("button","mb",esc(u.vocab[k][1]));b.dataset.k=k;if(solved(tid,k))b.classList.add("ok");
+   b.onclick=function(){if(b.classList.contains("ok")||!sel)return;
+    if(sel.dataset.k==k){sel.classList.remove("sel");sel.classList.add("ok");b.classList.add("ok");mark(tid,k,!sel._bad);sel=null;refresh()}
+    else{sel._bad=true;b.classList.add("bad");setTimeout(function(){b.classList.remove("bad")},400)}};R.appendChild(b)});
+  g.appendChild(L);g.appendChild(R);m.appendChild(g)})(s);
+ app.appendChild(m);
+ // pick
+ var p=card("O‘zbekchaga mos so‘z","To‘g‘ri inglizcha so‘zni tanlang.");var tp="u"+u.n+"-pick";
+ u.pick.forEach(function(k,i){var w=u.vocab[k];var others=shuffle(u.vocab.filter(function(_,j){return j!==k}),hash(tp+i)).slice(0,2).map(function(x){return x[0]});
+  var opts=[w[0]].concat(others);choiceQ(p,tp,i,esc(w[1]),opts,0,true)});
+ // row options shuffled for pick
+ app.appendChild(p);shuffleRows(p);
+ // spell
+ var sp=card("So‘zni yozing","O‘zbekcha ma’nosiga qarab inglizcha yozing. Qiynalsangiz «Yordam»ni bosing.");var ts="u"+u.n+"-spell";
+ u.spell.forEach(function(k,i){inputQ(sp,ts,i,esc(u.vocab[k][1]),u.vocab[k][0])});app.appendChild(sp)}
+function shuffleRows(c){c.querySelectorAll(".opts.row").forEach(function(r,i){var ch=[].slice.call(r.children);shuffle(ch,hash(r.textContent)).forEach(function(x){r.appendChild(x)})})}
+
+/* ---------- READING ---------- */
+function glossify(p,gl){var out=esc(p);Object.keys(gl).sort(function(a,b){return b.length-a.length}).forEach(function(w){var re=new RegExp("(^|[^A-Za-z>])("+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")(?![A-Za-z<])");out=out.replace(re,function(m,a,b){return a+'<button class="gl" data-t="'+esc(gl[w])+'">'+b+"</button>"})});return out}
+function reading(u,app){var r=u.reading;
+ var c=card(esc(r.title),"Matnni o‘qing. Tagiga chizilgan so‘zlarni bosing – tarjimasi chiqadi.");var tx=el("div","text");
+ r.text.forEach(function(p){tx.appendChild(el("p","",glossify(p,r.gloss)))});c.appendChild(tx);
+ tx.querySelectorAll(".gl").forEach(function(g){g.onclick=function(){var on=g.classList.contains("show");tx.querySelectorAll(".gl.show").forEach(function(x){x.classList.remove("show")});if(!on)g.classList.add("show")}});
+ var ls=el("button","btn ghost listen","🔊 Matnni tinglash");var playing=false;ls.onclick=function(){if(playing&&speechSynthesis.speaking){speechSynthesis.cancel();playing=false;ls.innerHTML="🔊 Matnni tinglash";return}speak(r.text.join(" "));playing=true;ls.innerHTML="⏹ To‘xtatish"};c.appendChild(ls);
+ var d=el("details");d.innerHTML="<summary>O‘zbekcha tarjima</summary>"+r.uz.map(function(x){return"<p>"+esc(x)+"</p>"}).join("");c.appendChild(d);app.appendChild(c);
+ var tf=card("True or False? · To‘g‘ri yoki noto‘g‘ri?","Matn bo‘yicha belgilang.");r.tf.forEach(function(x,i){choiceQ(tf,"u"+u.n+"-tf",i,esc(x[0]),["True ✓","False ✗"],x[1]?0:1,true)});app.appendChild(tf);
+ var mc=card("Savollarga javob bering","Matn bo‘yicha javobni tanlang.");r.mcq.forEach(function(x,i){choiceQ(mc,"u"+u.n+"-mcq",i,esc(x[0]),x[1],0)});app.appendChild(mc);
+ var fd=card("Matndan so‘zni toping","Matndagi mos so‘zni inglizcha yozing.");r.find.forEach(function(x,i){inputQ(fd,"u"+u.n+"-find",i,esc(x[0]),x[1])});app.appendChild(fd)}
+
+/* ---------- GRAMMAR ---------- */
+function grammar(u,app){
+ u.grammar.forEach(function(g,gi){var tid="u"+u.n+"-g"+gi;var c=card(esc(g.name),"Shaklga keltiring, keyin to‘g‘ri gapni tanlang.");
+  var rl=el("div","rule",g.note);c.appendChild(rl);
+  g.form.forEach(function(x,i){inputQ(c,tid,i,esc(x[0]),x[1])});
+  g.choose.forEach(function(x,i){choiceQ(c,tid,g.form.length+i,esc(x[0]),x[1],0)});
+  app.appendChild(c)});
+ var tid="u"+u.n+"-build";var b=card("Gap tuzing","So‘zlarni bosib, to‘g‘ri tartibda gap tuzing.");
+ u.build.forEach(function(x,i){var sent=x[0],uz=x[1];var words=sent.split(" ");var q=qrow(b,i,esc(uz));
+  var tray=el("div","tray"),pool=el("div","tray");pool.style.borderStyle="solid";pool.style.borderColor="transparent";pool.style.padding="0";
+  var order=shuffle(words.map(function(_,k){return k}),hash(sent));if(order.join()===words.map(function(_,k){return k}).join())order.reverse();
+  var picked=[];
+  function draw(){tray.innerHTML="";picked.forEach(function(k,pi){var ch=el("button","chip",esc(words[k]));ch.onclick=function(){if(solved(tid,i))return;picked.splice(pi,1);draw()};tray.appendChild(ch)});
+   [].forEach.call(pool.children,function(ch){ch.classList.toggle("used",picked.indexOf(+ch.dataset.k)>=0)})}
+  order.forEach(function(k){var ch=el("button","chip",esc(words[k]));ch.dataset.k=k;ch.onclick=function(){if(solved(tid,i)||picked.indexOf(k)>=0)return;picked.push(k);tray.classList.remove("bad");draw()};pool.appendChild(ch)});
+  var row=el("div","in");var ck=el("button","btn","Tekshirish"),cl=el("button","btn ghost","Tozalash");var tried=false;
+  ck.onclick=function(){if(solved(tid,i))return;var s=picked.map(function(k){return words[k]}).join(" ");if(norm(s)===norm(sent)){tray.classList.add("ok");mark(tid,i,!tried);refresh()}else{tried=true;tray.classList.add("bad")}};
+  cl.onclick=function(){if(solved(tid,i))return;picked=[];tray.classList.remove("bad");draw()};
+  if(solved(tid,i)){picked=words.map(function(_,k){return k});tray.classList.add("ok")}
+  q.appendChild(tray);q.appendChild(pool);row.appendChild(ck);row.appendChild(cl);q.appendChild(row);draw()});
+ app.appendChild(b)}
+
+/* ---------- WRITING ---------- */
+function writing(u,app){var w=u.writing;
+ app.appendChild(el("h2","",esc(w.title)));
+ var tid="u"+u.n+"-err";var c=card("1-qadam · Xatolarni toping","Xato yozilgan so‘zlarni bosing (jami "+(w.errors.text.match(/(^| )\*/g)||[]).length+" ta), keyin «Tekshirish»ni bosing.");
+ var box=el("div","err");var raw=w.errors.text.split(" ");var words=raw.map(function(x){return x.replace(/^\*/,"")});var WR=[];raw.forEach(function(x,k){if(x[0]==="*")WR.push(k)});w.errors.wrong=WR;var sel={};
+ words.forEach(function(x,k){var b=el("button","ew",esc(x));b.onclick=function(){if(solved(tid,0))return;sel[k]=!sel[k];b.classList.toggle("sel",sel[k]);box.querySelectorAll(".miss,.wrong").forEach(function(z){z.classList.remove("miss","wrong")})};box.appendChild(b)});
+ var fb=el("div","fb");var ck=el("button","btn","Tekshirish");var tried=false;
+ function reveal(){var bs=box.children;w.errors.wrong.forEach(function(k){bs[k].classList.remove("sel");bs[k].classList.add("ok")});fb.className="fb ok";fb.innerHTML="To‘g‘ri! ✓ Tuzatilgan: <b>"+esc(w.errors.fixed)+"</b>"}
+ ck.onclick=function(){if(solved(tid,0))return;var bs=box.children;var good=true;
+  for(var k=0;k<words.length;k++){var isW=w.errors.wrong.indexOf(k)>=0;if(!!sel[k]!==isW){good=false;if(sel[k])bs[k].classList.add("wrong");}}
+  if(good){mark(tid,0,!tried);reveal();refresh()}else{tried=true;fb.className="fb bad";fb.textContent="Hali hammasi emas. Qizil chizilganlar to‘g‘ri yozilgan; yana qidiring."}};
+ c.appendChild(box);c.appendChild(ck);c.appendChild(fb);if(solved(tid,0))reveal();app.appendChild(c);
+ var m=card("2-qadam · Namunani o‘qing","Namunadagi tuzilishga e’tibor bering.");var md=el("div","model","<b>"+esc(w.modelTitle)+"</b><br>"+w.model.map(esc).join("<br>"));m.appendChild(md);app.appendChild(m);
+ var t=card("3-qadam · Navbat sizda ✍️",esc(w.task));var k="u"+u.n+"-write";
+ var ta=el("textarea");ta.placeholder="Shu yerga ingliz tilida yozing…";ta.value=S.texts[k]||"";
+ var cnt=el("div","small");var ul=el("ul","checks");
+ w.checks.forEach(function(x){ul.appendChild(el("li","","○ "+esc(x[0])))});
+ function upd(){var v=ta.value;S.texts[k]=v;var n=(v.match(/[^.!?]+[.!?]+/g)||[]).filter(function(s){return s.trim().split(/\s+/).length>=3}).length;cnt.textContent=n+" ta gap (maqsad: "+w.min+"–"+w.max+")";
+  var all=n>=w.min;[].forEach.call(ul.children,function(li,i){var ok=i===0?n>=w.min:new RegExp(w.checks[i][1],"i").test(v);li.className=ok?"ok":"";li.textContent=(ok?"✓ ":"○ ")+w.checks[i][0];if(!ok)all=false});
+  if(all){mark(k,0,true)}else if(S.items[itemKey(k,0)]){delete S.items[itemKey(k,0)]}save();refresh()}
+ ta.oninput=upd;t.appendChild(ta);t.appendChild(cnt);t.appendChild(ul);
+ var cp=el("button","btn","📋 Nusxa olib, o‘qituvchiga yuborish");cp.onclick=function(){copyReport(u)};t.appendChild(cp);
+ t.appendChild(el("div","small","Matningiz shu qurilmada saqlanadi. Tugma matningiz va ballaringizni nusxalaydi – keyin uni o‘qituvchingizga xabar qilib yuboring."));
+ app.appendChild(t);upd()}
+function copyReport(u){var sc=unitScore(u),st=unitStat(u);
+ var txt="📘 "+CONFIG.book+" · Unit "+u.n+": "+u.title+"\n👤 "+(S.name||"(ism yozilmagan)")+"\n✅ Topshiriqlar: "+st[0]+" / "+st[1]+"\n🎯 Birinchi urinishda to‘g‘ri: "+sc[0]+" / "+sc[1]+"\n\n✍️ "+u.writing.title+":\n"+(S.texts["u"+u.n+"-write"]||"(bo‘sh)");
+ function ok(){toast("Nusxa olindi ✓")}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok,function(){fallback(txt);ok()})}else{fallback(txt);ok()}}
+function fallback(t){var a=el("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy")}catch(e){}a.remove()}
+
+/* ---------- router ---------- */
+function route(){var m=location.hash.match(/^#u(\d+)-(vocab|reading|grammar|writing)$/);
+ if(m){var u=UNITS.filter(function(x){return x.n==m[1]})[0];if(u)return unit(u,m[2])}
+ CUR=null;home()}
+window.addEventListener("hashchange",route);route();
+})();
+</script>
+</body>
+</html>
